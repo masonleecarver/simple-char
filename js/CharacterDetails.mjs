@@ -4,14 +4,37 @@ export default class CharacterDetails {
 
     constructor(charID, dataSource) {
         this.charID = charID;
-        this.char = {};
         this.dataSource = dataSource;
+        this.char = this.findElementById(this.charID);
+        
+        const deleteButton = document.getElementById("deleteButton");
+
+        deleteButton.addEventListener('click', () => {
+            this.deleteChar();
+            
+        });
+
+
     }
 
     init() {
-        this.char = this.findElementById(this.charID);
-        console.log(this.char.name);
         this.renderCharDetails();
+    }
+
+    editInit() {
+        this.renderEditDetails();
+
+        const savebutton = document.getElementById("saveChar");
+
+        savebutton.addEventListener('click', () => {
+            this.saveChar();
+        });
+
+        
+    }
+
+    renderEditDetails() {
+        fillEditTemplate(this.char)
     }
 
     renderCharDetails() {
@@ -22,30 +45,88 @@ export default class CharacterDetails {
         return this.dataSource.find(char => char.id === id);
     }
 
+    saveChar() {
+        const form = document.getElementById("edit-page");
+        const data = new FormData(form);
+        const dataObject = Object.fromEntries(data.entries());
+
+        const editedChar = {
+            id: this.charID,
+            ...dataObject
+        }
+
+        const index = this.dataSource.findIndex(
+            char => char.id === this.charID
+        );
+
+        if (index !== -1) {
+            this.dataSource[index] = editedChar;
+            setLocalStorage("char-list", this.dataSource);
+        }
+
+        this.char = editedChar;
+
+    }
+
+    deleteChar() {
+        const index = this.dataSource.findIndex(
+            char => char.id === this.charID
+        );
+
+        if (index !== -1) {
+            this.dataSource.splice(index, 1);
+            setLocalStorage("char-list", this.dataSource);
+        }
+        
+        window.location.href = "../characters.html";
+    }
+
+}
+
+function charFields() {
+   const fields = [
+        "name",
+        "age",
+        "mbti",
+        "enam",
+        "trait1",
+        "trait2",
+        "trait3",
+        "trait4",
+        "trait5",
+        "trait6",
+        "hobby1",
+        "hobby2",
+        "hobby3",
+        "desire1",
+        "desire2",
+        "block",
+        "backstory"
+    ]; 
+
+    return fields;
+
 }
 
 function charDetailsTemplate(char) {
-    const [name, hobby1, hobby2, hobby3, 
-        trait1, trait2, trait3, trait4, trait5, trait6,
-        age, mbti, enam,
-        desire1, desire2, block] = 
-    document.querySelectorAll("#name, #hobby1, #hobby2, #hobby3, #enam, #trait1, #trait2, #trait3, #trait4, #trait5, #trait6, #hobby1, #hobby2, #hobby3, #age, #mbti, #enam, #desire1, #desire2, #block");
+    const fields = charFields();
 
-    name.textContent = char.name;
-    age.textContent = char.age;
-    mbti.textContent = char.mbti;
-    enam.textContent = char.enam;
-    trait1.textContent = char.trait1;
-    trait2.textContent = char.trait2;
-    trait3.textContent = char.trait3;
-    trait4.textContent = char.trait4;
-    trait5.textContent = char.trait5;
-    trait6.textContent = char.trait6;
-    hobby1.textContent = char.hobby1;
-    hobby2.textContent = char.hobby2;
-    hobby3.textContent = char.hobby3;
-    desire1.textContent = char.desire1;
-    desire2.textContent = char.desire2;
-    block.textContent = char.block;
+    fields.forEach(field => {
+        document.getElementById(field).textContent = char[field];
+    });
 
+    const edit = document.getElementById("editChar");
+
+    edit.href = `../edit/?char=${char.id}`;
+    edit.textContent = `Edit ${char.name}`;
+}
+
+function fillEditTemplate(char) {
+    const fields = charFields();
+
+    fields.forEach(field => {
+        document.getElementById(field).value = char[field];
+    });
+
+    document.querySelector("#goBack").href = `../character_pages/?char=${char.id}`;
 }

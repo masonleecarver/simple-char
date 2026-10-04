@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/edit-char.js" type="module"></script>
+
+    <title>Edit Character</title>
+</head>
+<body>
+        <header id="main-header"></header>
+
+    <main>
+        
+        
+        <form class="character-page" id="edit-page">
+            
+            <div>
+                <p>Welcome to the page of... <input type="text" name="name" id="name"></p>
+                <h2 class="cute">I really like:</h2>
+                <ul>
+                    <li><input type="text" name="hobby1" id="hobby1"></li>
+                    <li><input type="text" name="hobby2" id="hobby2"></li>
+                    <li><input type="text" name="hobby3" id="hobby3"></li>
+                </ul>
+
+                <h2 class="cute">My personality traits!</h2>
+                <ul class="traits">
+                    <li><input type="text" name="trait1" id="trait1"></li>
+                    <li><input type="text" name="trait2" id="trait2"></li>
+                    <li><input type="text" name="trait3" id="trait3"></li>
+                    <li><input type="text" name="trait4" id="trait4"></li>
+                    <li><input type="text" name="trait5" id="trait5"></li>
+                    <li><input type="text" name="trait6" id="trait6"></li>
+                </ul>
+
+            </div>
+
+            <div class="basics">
+                <h2 class="cute">Basic things about me!</h2> 
+                
+                <p>Picture of me!</p>
+                <img class="character-image" src="../public/images/char-placeholder.png" alt="image of the character">
+
+                
+
+                <!-- <p id="name"></p> -->
+                <p>I am <input type="text" name="age" id="age"> years old.</p>
+                <p>My personality type is <input type="text" name="mbti" id="mbti">, and <input type="text" name="enam" id="enam"></p>
+            </div>
+
+            <p class="d-and-b">One day I'd love to <input type="text" name="desire1" id="desire1"> and <input type="text" name="desire2" id="desire2">... Though <input type="text" name="block" id="block"> keeps tripping me up....</p>
+
+            <div class="backstory">
+                <h2 class="cute">My backstory!</h2>
+                <textarea name="backstory" id="backstory">
+
+                </textarea>>
+
+        </form>
+
+        <button type="button" class="normal-button" id="saveChar"><a id="goBack" href="#">Save</a></button>
+        <button type="button" class="normal-button" id="deleteButton">Delete??</button>
+        
+    </main>
+    
+
+    <footer id="main-footer"></footer>
+    
+</body>
+</html>
