@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Autour+One&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root {
+    --main-yellow: #FFDBB5;
+    --main-blue: #88D9E6;
+    --main-dark-pink : #f84dae;
+    --main-pink: #ff9dc4;
+    --main-orange: #ff8348;
+    --font-body: "Sour Gummy", sans-serif;
+    --font-headlines: "Autour One", system-ui;
+
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: var(--font-body);
+    background-image: url("../public/images/body-back.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    font-size: 1.25em;
+}
+
+#main-header {
+    height: 100dvh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 1px solid black;
+    border-radius: 0 15px;
+    background-color: var(--main-yellow);
+
+    img {
+        display: block;
+        margin-top: 40px;
+        width: 30px;
+        height: auto;
+        cursor: pointer;
+    }
+
+}
+
+footer {
+    border: 2px solid black;
+    text-align: center;
+    background-color: var(--main-yellow);
+
+    div {
+        max-width: 500px;
+        justify-self: center;
+        font-size: .75em;
+    }
+}
+
+main {
+    margin: 10px 10px 10px 100px;
+    max-width: 1000px;
+    justify-self: center;
+    background-color: var(--main-yellow);
+    padding: 30px;
+    border: 3px solid black;
+    border-radius: 15px;
+}
+
+/* #region homepage */
+
+.divider {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 30px;
+    
+    section {
+        display: block;
+        text-align: center;
+        border-radius: 15px;
+        border: 2px solid black;
+        padding: 30px;
+
+        img {
+            max-width: 100%;
+            border-radius: 15px;
+        }
+
+    }
+
+    .ideas {
+        max-width: 20vw;
+    }
+}
+
+
+
+/* #endregion */
+
+/* #region character form */
+
+.normal-button {
+
+    display: block;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 15px;
+    max-width: fit-content;
+    border: 2px solid black;
+    background-color: var(--main-blue);
+    font-family: var(--font-body);
+    font-size: 1em;
+    cursor: pointer;
+    justify-self: center;
+
+    &:hover {
+        background-color: var(--main-pink);
+    }
+
+}
+
+.button-div {
+    display: block;
+    margin: 20px;
+    justify-self: center;
+    justify-items: center;
+    
+}
+
+#character-form {
+
+    display: flex;
+    flex-direction: column;
+    max-width: 75%;
+    margin: 0 auto;
+
+    fieldset {
+        display: flex;
+        flex-direction: column;
+        border-radius: 15px;
+        margin: 15px;
+        border: 3px solid black;
+        background-color: white;
+
+        legend {
+            background-color: var(--main-pink);
+            padding: 10px;
+            border-radius: 15px;
+            color: white;
+            border: 2px solid black;
+            font-family: var(--font-headlines);
+        }
+
+        input {
+            padding: 10px;
+            border-radius: 15px;
+            font-family: var(--font-body);
+            width: 50%;
+
+            &:focus {
+                border: 2px solid #f84dae;
+            }
+
+        }
+
+        label {
+            padding: 10px;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            li {
+                width: 45%;
+                padding: 5px;
+
+                input {
+                    margin: 0px;
+                }
+            }
+        }
+    }    
+}
+
+/* #endregion */
+
+/* #region character page */
+
+#your-characters {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+
+}
+
+.character-card {
+    border: 2px black solid;
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+    width: fit-content;
+    align-items: center;
+
+    img {
+        margin: 10px;
+        border: 2px black solid;
+        border-radius: 5px;
+    }
+
+    div {
+        padding: 15px;
+    }
+}
+
+.character-page {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+
+    div {
+        text-align: left;
+
+        ul {
+            list-style-type: none;
+
+            li {
+            padding: 10px;
+            }
+        }
+
+    }
+}
+
+.cute {
+    background-color: var(--main-pink);
+    font-family: var(--font-headlines);
+    padding: 10px;
+    border-radius: 15px;
+    width: fit-content;
+}
+
+/* #endregion */
