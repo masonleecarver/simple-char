@@ -1,8 +1,11 @@
 import { loadHeaderFooter, getLocalStorage, setLocalStorage, generateID } from "./utils.js";
+import './generation.js';
 
 loadHeaderFooter();
 
-document.getElementById("character-form").addEventListener('submit', async function(event) {
+const charForm = document.getElementById("character-form");
+
+charForm.addEventListener('submit', async function(event) {
     event.preventDefault();
 
     const formData = new FormData(event.target);
@@ -20,9 +23,9 @@ document.getElementById("character-form").addEventListener('submit', async funct
         char_list.push(character);
         setLocalStorage("char-list", char_list);
 
-        console.log("character saved succesfully");
-        
-        window.location = "../create.html";
+        alert("Character saved successfully!");
+        charForm.reset();
+
 
     } catch (err) {
         console.log(`Error saving character: ${err}`);

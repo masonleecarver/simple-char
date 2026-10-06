@@ -115,6 +115,10 @@ function charDetailsTemplate(char) {
         document.getElementById(field).textContent = char[field];
     });
 
+    if (char.backstory === "") {
+        document.getElementById("backstory").textContent = `Edit ${char.name} to add a backstory!`;
+    }
+
     const edit = document.getElementById("editChar");
 
     edit.href = `../edit/?char=${char.id}`;

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <script src="./js/create.js" type="module"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/create.js" type="module"></script>
     <title>Create a Character</title>
 </head>
 <body>
@@ -20,10 +20,10 @@
         <form id="character-form" method="push">
             <fieldset>
                 <legend>Basics</legend>
-                <label>Name: <input type="text" name="name" required></label>
-                <label>Age: <input type="text" name="age"></label>
-                <label>Personality Type: <input type="text" name="mbti"></label>
-                <label>Enneagram: <input type="text" name="enam"></label>
+                <label>Name: <input type="text" name="name" id="name" required></label>
+                <label>Age: <input type="text" name="age" id="age"></label>
+                <label>MBTI: <input type="text" name="mbti" id="mbti"></label>
+                <label>Enneagram: <input type="text" name="enam" id="enam"></label>
             </fieldset>
 
             <fieldset>
@@ -53,9 +53,9 @@
                     </ul>
                 </label>
 
-                <label>Biggest Roadblock: <input type="text" name="block" id="block" required></label>
+                <label>Biggest Roadblock: <input type="text" name="block" id="block" id="block" required></label>
 
-                <input type="hidden" name="backstory" id="backstory">
+                <input type="hidden" name="backstory">
 
             </fieldset>
 

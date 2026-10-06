@@ -133,7 +133,7 @@ main {
 
     display: flex;
     flex-direction: column;
-    max-width: 75%;
+    max-width: 90%;
     margin: 0 auto;
 
     fieldset {
@@ -154,14 +154,12 @@ main {
         }
 
         input {
+            box-sizing: border-box;
+            width: 100%;
             padding: 10px;
             border-radius: 15px;
             font-family: var(--font-body);
-            width: 50%;
-
-            &:focus {
-                border: 2px solid #f84dae;
-            }
+            border: 2px solid black;
 
         }
 
@@ -170,21 +168,26 @@ main {
         }
 
         ul {
+            padding: 0;
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
+            list-style-type: none;
             li {
                 width: 45%;
-                padding: 5px;
-
-                input {
-                    margin: 0px;
-                }
+                padding: 10px;
             }
         }
+
+        
     }    
 }
 
+.traits {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
 /* #endregion */
 
 /* #region character page */

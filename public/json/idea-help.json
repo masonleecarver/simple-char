@@ -1,0 +1,378 @@
+{
+  "mbtis": [
+    {
+      "type": "INTJ",
+      "name": "The Architect"
+    },
+    {
+      "type": "ISTJ",
+      "name": "The Inspector"
+    },
+
+    {
+      "type": "ISTP",
+      "name": "The Crafter"
+    },
+
+    {
+      "type": "ISFP",
+      "name": "The Artist"
+    },
+
+    {
+      "type": "ISFJ",
+      "name": "The Protector"
+    },
+
+    {
+      "type": "INFJ",
+      "name": "The Advocate"
+    },
+
+    {
+      "type": "INFP",
+      "name": "The Mediator"
+    },
+    {
+      "type": "INTP",
+      "name": "The Thinker"
+    },
+    {
+      "type": "ESTP",
+      "name": "The Persuader"
+    },
+    {
+      "type": "ESTJ",
+      "name": "The Director"
+    },
+    {
+      "type": "ESFP",
+      "name": "The Performer"
+    },
+    {
+      "type": "ESFJ",
+      "name": "The Caregiver"
+    },
+    {
+      "type": "ENFP",
+      "name": "The Champion"
+    },
+    {
+      "type": "ENFJ",
+      "name": "The Giver"
+    },
+    {
+      "type": "ENTP",
+      "name": "The Debator"
+    },
+    {
+      "type": "ENTJ",
+      "name": "The Commander"
+    }
+  ],
+
+  "ennanagrams": [
+    {
+      "number": "1",
+      "title": "The Reformer"
+    },
+    {
+      "number": "2",
+      "title": "The Helper"
+    },
+    {
+      "number": "3",
+      "title": "The Achiever"
+    },
+    {
+      "number": "4",
+      "title": "The Indiviualist"
+    },
+    {
+      "number": "5",
+      "title": "The Investigator"
+    },
+    {
+      "number": "6",
+      "title": "The Loyalist"
+    },
+    {
+      "number": "7",
+      "title": "The Enthusiast"
+    },
+    {
+      "number": "8",
+      "title": "The Challenger"
+    },
+    {
+      "number": "9",
+      "title": "The Peacemaker"
+    }
+  ],
+
+  "traits": [
+    "Active",
+    "Adaptable",
+    "Adventurous",
+    "Agreeable",
+    "Alert",
+    "Attractive",
+    "Brilliant",
+    "Calm",
+    "Capable",
+    "Captivating",
+    "Charismatic",
+    "Caring",
+    "Neat Freak",
+    "Confident",
+    "Curious",
+    "Daring",
+    "Decisive",
+    "Deep",
+    "Moody",
+    "Brooding",
+    "Elegant",
+    "Firm",
+    "Flexible",
+    "One track mind",
+    "Hardworking",
+    "Honest",
+    "Dishonest",
+    "Humble",
+    "Pyromaniac",
+    "Kleptomaniac",
+    "Funny",
+    "Idealistic",
+    "Innovative",
+    "Kind",
+    "Knows everything about everything",
+    "Many-sided",
+    "Manly",
+    "Neat",
+    "Creepy",
+    "Probably a serial killer",
+    "Organized",
+    "Observant",
+    "Open",
+    "Painful",
+    "Embarassing",
+    "Passionate",
+    "Playful",
+    "Punctual",
+    "Rational",
+    "Romantic",
+    "Sexy",
+    "Socialble",
+    "Sober",
+    "Insecure",
+    "Gets 90% on a test and thinks they didn't do good enough",
+    "Stable",
+    "Unstable",
+    "Certifiably insane",
+    "Catboy",
+    "Catgirl",
+    "Unforgetable",
+    "Forgetable",
+    "Sarcastic",
+    "Softy",
+    "Stylish",
+    "Chaotic",
+    "Old-fashioned",
+    "Obedient",
+    "Whimsical",
+    "Always angry about something",
+    "Should be in a government facility for observation",
+    "Immortal",
+    "Childish",
+    "Cynical",
+    "Destructive",
+    "Criminal",
+    "A smooth criminal",
+    "Desprate",
+    "Attention-seeking",
+    "Dull",
+    "Extravagant",
+    "Coward",
+    "Greedy",
+    "Slothful",
+    "Lustful",
+    "Envious",
+    "Gluttonous",
+    "Hateful",
+    "Impulsive",
+    "Lazy",
+    "Well-mannered",
+    "Misguided",
+    "Naive",
+    "Predtatory",
+    "A-dork-able",
+    "Sadistic",
+    "Masochistic",
+    "A little slow",
+    "`special`",
+    "Weak",
+    "Pathetic"
+  ],
+
+  "ages": [
+    "Immortal",
+    "Middle-aged",
+    "Mid-life crisis",
+    "Just a child",
+    "Baby",
+    "Mom era",
+    "Grandparent material",
+    "DILF",
+    "MILF",
+    "Teenager",
+    "Manager age",
+    "Dad era",
+    "Hot girl summer era",
+    "Too old",
+    "Too young for this",
+    "iPad kid",
+    "Cringe-full 30s",
+    "Young adult",
+    "Ancient",
+    "Older than time",
+    "Alien",
+    "Sixty-three moons old",
+    "Elder"
+  ],
+
+  "names": [
+    "Amelia",
+    "Aurora",
+    "Charlotte",
+    "Eleanor",
+    "Emma",
+    "Evelyn",
+    "Grace",
+    "Isabella",
+    "Katherine",
+    "Luna",
+    "Olivia",
+    "Penelope",
+    "Sophia",
+    "Violet",
+    "Willow",
+    "Alexander",
+    "Benjamin",
+    "Henry",
+    "Jackson",
+    "Joseph",
+    "Lucas",
+    "Matthew",
+    "Oliver",
+    "Sebatian",
+    "Theodore",
+    "William"
+  ],
+
+  "hobbies": [
+    "Painting",
+    "Antiquing",
+    "Astrology",
+    "Baking",
+    "Beekeeping",
+    "Bird Watching",
+    "Blogging",
+    "Boating",
+    "Book Club",
+    "Cake Decorating",
+    "Comedy",
+    "Cooking",
+    "Crocheting",
+    "Dancing",
+    "Dog Training",
+    "Drawing",
+    "Embroidery",
+    "Film",
+    "Photography",
+    "Gardening",
+    "Golfing",
+    "Hiking",
+    "Horseback Riding",
+    "Ice Sculpting",
+    "Ice Skating",
+    "Decorating",
+    "Jewelry Making",
+    "Journaling",
+    "Karaoke",
+    "Knitting",
+    "Languagues",
+    "Magic",
+    "Meditation",
+    "Music",
+    "Nature Photography",
+    "Pickleball",
+    "Pilates",
+    "Podcasting",
+    "Pottery",
+    "Quilting",
+    "Reading",
+    "Running",
+    "Scrapbooking",
+    "Sewing",
+    "Singing",
+    "Skiing",
+    "Soccer",
+    "Swimming",
+    "Stand-up Comedy",
+    "Tennis",
+    "Traveling",
+    "Ukulele",
+    "Piano",
+    "Guitar",
+    "Drums",
+    "Video Gaming",
+    "Volunteering",
+    "Walking",
+    "Wine Tasting",
+    "Writing",
+    "Yoga",
+    "Zumba",
+    "Xylophone"
+  ],
+
+  "desires": [
+    "get married",
+    "save my family",
+    "get rich",
+    "take over the world",
+    "get an autograph",
+    "blow up a toilet",
+    "live somewhere else",
+    "meet the love of my life",
+    "start a family",
+    "save the world",
+    "start a business",
+    "run my business better",
+    "get revenge",
+    "kill someone",
+    "level up",
+    "have the best party ever"
+  ],
+
+  "roadblocks": [
+    "my family",
+    "hunger",
+    "an Eldtrich God",
+    "my age",
+    "the fourth dimension",
+    "a ghost",
+    "my cowdardice",
+    "a pirate",
+    "a ghost pirate",
+    "bleeding to death",
+    "my mother",
+    "my friends",
+    "the man who killed my father",
+    "the church",
+    "a demon",
+    "my lack of arms",
+    "my lack of legs",
+    "my feelings",
+    "this freaking city"
+  ]
+}
