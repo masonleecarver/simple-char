@@ -24,6 +24,12 @@ export default class CharacterList {
     }
 
     async init() {
+        const noOne = document.querySelector(".none");
+
         populateList(this.dataSource, this.listElement);
+        
+        noOne.hidden = this.listElement.children.length > 1;
+
+        console.log(noOne.hidden);
     }
 }
