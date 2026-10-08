@@ -1,4 +1,6 @@
 import { getLocalStorage, setLocalStorage } from "./utils.js";
+const { jsPDF } = window.jspdf;
+// const { html2canvas } = window.html2canvas;
 
 export default class CharacterDetails {
 
@@ -14,11 +16,16 @@ export default class CharacterDetails {
             
         });
 
-
     }
 
     init() {
         this.renderCharDetails();
+
+        const PDFButton = document.getElementById("savePDF");
+
+        PDFButton.addEventListener('click', () => {
+            this.convertToPDF();
+        })
     }
 
     editInit() {
@@ -79,6 +86,33 @@ export default class CharacterDetails {
         }
         
         window.location.href = "../characters.html";
+    }
+
+    async convertToPDF() {
+        const element = document.getElementById("character-section");
+        element.classList.add("pdf-mode");
+        await new Promise(resolve => setTimeout(resolve, 100));
+        
+        const canvas = await html2canvas(element, {
+            scale: 2,
+            useCORS: true
+        });
+
+        element.classList.remove("pdf-mode");
+
+        const pdf = new jsPDF("p", "mm", "a4");
+
+        const image = canvas.toDataURL("../public/images/char-placeholder.png");
+
+        const width = 190;
+        const height = (canvas.height * width) /  canvas.width;
+
+        pdf.addImage(image, "PNG", 10, 10, width, height);
+        
+        pdf.save(`${this.char.name}_from_character_blender.pdf`);
+
+
+
     }
 
 }

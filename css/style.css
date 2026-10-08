@@ -226,6 +226,17 @@ main {
     }
 }
 
+.pdf-mode {
+    width: 1000px !important;
+    margin: 0 auto !important;
+
+    .character-page {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+    }
+}
+
+
 .character-page {
     display: grid;
     grid-template-columns: 1fr 1fr;

@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
     <script src="../js/character.js" type="module"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/4.2.1/jspdf.umd.min.js"></script>
     <title>Character</title>
 </head>
 <body>
@@ -12,61 +14,66 @@
     <header id="main-header"></header>
 
     <main>
-        <p>Welcome to the page of...</p>
-        <h1 id="name"></h1>
+        <section id="character-section">
+            
+            <p>Welcome to the page of...</p>
+            <h1 id="name"></h1>
         
-        <div class="character-page">
-            
-
-            <div>
-                <h2 class="cute">I really like:</h2>
-                <ul>
-                    <li id="hobby1"></li>
-                    <li id="hobby2"></li>
-                    <li id="hobby3"></li>
-                </ul>
-
-                <h2 class="cute">My personality traits!</h2>
-                <ul class="traits">
-                    <div>
-                        <li id="trait1"></li>
-                        <li id="trait2"></li>
-                        <li id="trait3"></li>
-                    </div>
-                    <div>
-                        <li id="trait4"></li>
-                        <li id="trait5"></li>
-                        <li id="trait6"></li>
-                    </div>
-                </ul>
-
-            </div>
-
-            
-
-            <div class="basics">
-                <h2 class="cute">Basic things about me!</h2> 
+            <div class="character-page">
                 
-                <p>Picture of me!</p>
-                <img class="character-image" src="../public/images/char-placeholder.png" alt="image of the character">
+
+                <div>
+                    <h2 class="cute">I really like:</h2>
+                    <ul>
+                        <li id="hobby1"></li>
+                        <li id="hobby2"></li>
+                        <li id="hobby3"></li>
+                    </ul>
+
+                    <h2 class="cute">My personality traits!</h2>
+                    <ul class="traits">
+                        <div>
+                            <li id="trait1"></li>
+                            <li id="trait2"></li>
+                            <li id="trait3"></li>
+                        </div>
+                        <div>
+                            <li id="trait4"></li>
+                            <li id="trait5"></li>
+                            <li id="trait6"></li>
+                        </div>
+                    </ul>
+
+                </div>
 
                 
 
-                <!-- <p id="name"></p> -->
-                <p>I am <span id="age"></span> years old.</p>
-                <p>My personality type is <span id="mbti"></span>, and <span id="enam"></span></p>
+                <div class="basics">
+                    <h2 class="cute">Basic things about me!</h2> 
+                    
+                    <p>Picture of me!</p>
+                    <img class="character-image" src="../public/images/char-placeholder.png" alt="image of the character">
+
+                    
+
+                    <!-- <p id="name"></p> -->
+                    <p>I am <span id="age"></span> years old.</p>
+                    <p>My personality type is <span id="mbti"></span>, and <span id="enam"></span></p>
+                </div>
             </div>
-        </div>
 
-        <p class="d-and-b">One day I'd love to <span id="desire1"></span> and <span id="desire2"></span>... Though <span id=block></span> keeps tripping me up....</p>
+            <p class="d-and-b">One day I'd love to <span id="desire1"></span> and <span id="desire2"></span>... Though <span id=block></span> keeps tripping me up....</p>
 
-        <div class="backstory">
-            <h2 class="cute">My backstory!</h2>
-            <p id="backstory"></p>
+            <div class="backstory">
+                <h2 class="cute">My backstory!</h2>
+                <p id="backstory"></p>
 
-        </div>
+            </div>
+        </section>
+
 
         <button class="normal-button"><a id="editChar" href="#"></a></button>
+        <button class="normal-button" id="savePDF">Save To PDF</button>
         <button class="normal-button" id="deleteButton">Delete??</button>
         
     </main>
