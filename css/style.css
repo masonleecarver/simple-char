@@ -124,6 +124,10 @@ main {
         background-color: var(--main-pink);
     }
 
+    input {
+        display: none;
+    }
+
 }
 
 .button-div {
@@ -134,7 +138,7 @@ main {
     
 }
 
-#character-form {
+#character-form, .contact-form {
 
     display: flex;
     flex-direction: column;
@@ -184,9 +188,18 @@ main {
                 padding: 10px;
             }
         }
-
         
     }    
+}
+
+.contact-form textarea {
+
+    border-radius: 15px;
+    padding: 10px;
+    border: solid black 2px;
+    height: 300px;
+    font-family: var(--font-body);
+    font-size: .75em;
 }
 
 .traits {
