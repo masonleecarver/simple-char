@@ -57,6 +57,12 @@ footer {
         max-width: 500px;
         justify-self: center;
         font-size: .75em;
+        margin-bottom: 10px;
+
+        a {
+            padding: 10px;
+            font-size: 1.5em;
+        }
     }
 }
 
@@ -74,12 +80,31 @@ main {
 
 /* #region homepage */
 
+
+
 .divider {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     gap: 30px;
     
+    a {
+        display: block;
+        cursor: pointer;
+        text-decoration: none;
+        color: black;
+
+        &:hover {
+            color: var(--main-dark-pink);
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+            width: 100%;
+        }
+    }
+
     section {
         display: block;
         text-align: center;
@@ -100,6 +125,32 @@ main {
 
 }
 
+.links-divider {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+
+    a {
+        display: block;
+        cursor: pointer;
+        text-decoration: none;
+        color: black;
+        margin: 30px;
+
+        &:hover {
+            color: var(--main-dark-pink);
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+            width: 90%;
+            margin-top: 10px;
+
+        }
+    }
+}
 
 
 /* #endregion */
@@ -327,6 +378,16 @@ main {
         .ideas {
             max-width: 100vw;
         }
+    }
+
+    .links-divider {
+        display: flex;
+        flex-direction: column;
+
+        a img {
+            display: none;
+        }
+
     }
 
     #character-form {

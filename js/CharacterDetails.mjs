@@ -16,12 +16,6 @@ export default class CharacterDetails {
             
         });
 
-        const image = document.querySelector(".character-image");
-
-        if (this.char.image != "" && this.char.image != {}) {
-            image.src = this.char.image;
-        }
-
     }
 
     init() {
@@ -36,7 +30,6 @@ export default class CharacterDetails {
 
     editInit() {
         this.renderEditDetails();
-        this.changePic();
 
         const savebutton = document.getElementById("saveChar");
 
@@ -120,21 +113,6 @@ export default class CharacterDetails {
 
 
 
-    }
-
-    changePic() {
-        let picture = document.querySelector(".character-image");
-        let inputFile = document.getElementById("input-file");
-
-        inputFile.onchange = () => {
-            if (inputFile.files.length > 0) {
-                const file = inputFile.files[0];
-                const newSrc = URL.createObjectURL(file);
-
-                picture.src = newSrc;
-                this.char.image = newSrc;
-            }
-        };
     }
 
 }

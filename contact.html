@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <script src="./js/contact.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <title>Contact Me</title>
 </head>
 <body>
@@ -16,13 +17,13 @@
         <form class="contact-form">
             <fieldset>
                 <legend>About You</legend>
-                <label><input type="text" name="uname" required></label>
-                <label><input type="email" name="emai" required></label>
+                <label><input type="text" name="uname" id="uname" placeholder="Your Name"></label>
+                <label><input type="email" name="emai" id="email" placeholder="email@email.com"></label>
             </fieldset>
 
             <fieldset>
                 <legend>Message</legend>
-                <textarea name="umessage" required></textarea>
+                <textarea name="umessage" id="umessage" placeholder="I am emailing you about..." required></textarea>
             </fieldset>
 
             <button type="submit" class="normal-button">Contact me</button>
