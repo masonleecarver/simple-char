@@ -2,24 +2,21 @@ import { loadHeaderFooter } from "./utils.js";
 
 loadHeaderFooter();
 
-async function sendEmail(message) {
-    try {
-        const response = await fetch('/send-email', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({message}),
+const contactForm = document.getElementById("contact-form");
+
+emailjs.init( {
+    publicKey: 'vwNa7T9khdJami_rz'
+});
+
+contactForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    emailjs.sendForm('service_gmail', 'template_df9f09g', contactForm)
+        .then(() => {
+            contactForm.reset();
+            alert("We've recieved your email!");
+        }, (error) => {
+            console.log('Failed...', error);
+            alert("something went wrong.");
         })
-
-        const result = await response.json();
-
-        if (!response.ok) {
-            throw new Error(result.error || "Request failed");
-        }
-
-        console.log('Email sent successfully!');
-    } catch (error) {
-        console.error("email failed", error.message);
-    }
-}
+});

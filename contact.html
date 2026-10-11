@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <script src="./js/contact.js" type="module"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script
+        type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@5/dist/email.min.js">
+    </script>
     <title>Contact Me</title>
 </head>
 <body>
@@ -14,15 +17,17 @@
     <main>
         <h2>Got Questions? Comments?</h2>
 
-        <form class="contact-form">
+        <form class="contact-form" id="contact-form">
             <fieldset>
                 <legend>About You</legend>
-                <label><input type="text" name="uname" id="uname" placeholder="Your Name"></label>
-                <label><input type="email" name="emai" id="email" placeholder="email@email.com"></label>
+                <label>Name: <input type="text" name="uname" id="uname" placeholder="Your Name"></label>
+                <label>Email: <input type="email" name="email" id="email" placeholder="email@email.com"></label>
+                <input type="hidden" name="time">
             </fieldset>
 
             <fieldset>
                 <legend>Message</legend>
+                <label>Subject: <input type="text" name="title" id="title"></label>
                 <textarea name="umessage" id="umessage" placeholder="I am emailing you about..." required></textarea>
             </fieldset>
 
